@@ -7,4 +7,3 @@
   * There is a dealer.
   * Player has a hand with two cards.
   * Dealer has a hand with two cards.
-

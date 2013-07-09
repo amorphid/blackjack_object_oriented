@@ -1,13 +1,21 @@
 require "game"
 
 describe Game do
-  describe "#initialize" do
-    let(:deck) { Deck.new.shuffle }
+  let(:game) { Game.new}
 
-    it "should create a shuffled Deck" do
-      expect(deck.count).to eq(52)
+  describe "#deck" do
+    let(:deck) { game.deck }
+
+    it "should be an Deck" do
+      expect(deck.class).to eq(Deck)
     end
 
+    it "should be shuffled" do
+      # pending
+    end
+  end
+
+  describe "to be implemented" do
     it "should create a Player" do
     end
 
