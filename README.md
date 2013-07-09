@@ -1,8 +1,10 @@
 # Blackjack
 
-## Init
-* There is a standard deck of cards.
-* There is a player.
-* There is a dealer.
-* Player gets two cards.
-* Dealer gets two cards.
+## Game
+* Init
+  * There is a deck.
+  * There is a player.
+  * There is a dealer.
+  * Player has a hand with two cards.
+  * Dealer has a hand with two cards.
+
