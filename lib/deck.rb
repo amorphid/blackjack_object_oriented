@@ -3,15 +3,15 @@ require_relative "card"
 class Deck
   attr_reader :cards
 
+  def initialize
+    @cards = []
+    build
+  end
+
   def build
     ranks.product(suits).each do |rank, suit|
       @cards << Card.new(rank, suit)
     end
-  end
-
-  def initialize
-    @cards = []
-    build
   end
 
   def ranks

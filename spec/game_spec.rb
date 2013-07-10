@@ -34,11 +34,17 @@ describe Game do
     end
   end
 
-  describe "to be implemented" do
+  describe "deal_first_hand" do
     it "should give Player a hand with two cards." do
+      player = game.player
+      hand = player.hand
+      count = hand.count
+
+      expect(count.count).to eq(2)
     end
 
     it "should give Dealer a hand with two cards" do
+
     end
   end
 end
