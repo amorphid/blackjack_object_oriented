@@ -3,8 +3,30 @@ require_relative "card"
 class Deck
   attr_reader :cards
 
-  def initialize()
+  def build
+    ranks.product(suits).each do |rank, suit|
+      @cards << Card.new(rank, suit)
+    end
+  end
+
+  def initialize
     @cards = []
-    52.times { @cards << Card.new }
+    build
+  end
+
+  def ranks
+    "2".upto("9").to_a + ["T", "J", "Q", "K", "A"]
+  end
+
+  def shuffle
+    @cards.shuffle
+  end
+
+  def shuffle!
+    @cards = shuffle.dup
+  end
+
+  def suits
+    ["C", "D", "H", "S"]
   end
 end

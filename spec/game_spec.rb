@@ -9,6 +9,13 @@ describe Game do
     it "should be an Deck" do
       expect(deck).to be_a(Deck)
     end
+
+    it "should be shuffled" do
+      shuffled = deck.cards
+      not_shuffled = Deck.new
+
+      expect(shuffled).not_to eq(not_shuffled)
+    end
   end
 
   describe "#dealer" do
