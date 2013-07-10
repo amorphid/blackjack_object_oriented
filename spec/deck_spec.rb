@@ -1,7 +1,8 @@
 require "deck"
 
 describe Deck do
-  let(:cards) { Deck.new.cards }
+  let(:deck) { Deck.new }
+  let(:cards) { deck.cards }
 
   describe "#cards" do
     it "should be an Array" do

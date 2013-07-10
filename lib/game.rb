@@ -1,9 +1,11 @@
 require_relative "deck"
+require_relative "player"
 
 class Game
   def initialize
     @dealer = Dealer.new
-    @deck = Deck.new
+    @deck   = Deck.new
+    @player = Player.new
   end
 
   def dealer
@@ -12,5 +14,9 @@ class Game
 
   def deck
     @deck
+  end
+
+  def player
+    @player
   end
 end
