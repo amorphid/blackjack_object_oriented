@@ -3,10 +3,10 @@ require "spec_helper"
 describe Player do
   describe "#hand" do
     it "should" do
-      hand = Hand.new
-      count = hand.count
+      deck   = Deck.new
+      player = Player.new
 
-      expect(count.count).to eq(2)
+      expect(player.hand(deck)).to be_a(Hand)
     end
   end
 end

@@ -1,9 +1,12 @@
 class Hand
+  attr_accessor :cards
+
   def initialize
-    @cards = [Card.new(2,2), Card.new(2,2)]
+    @cards = []
   end
 
   def count
-    @cards
+    @cards.count
   end
 end
+
