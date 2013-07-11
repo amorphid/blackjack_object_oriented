@@ -1,2 +1,1 @@
-require "utilities/load_requirements"
-
+require "./config/load_requirements.rb"
