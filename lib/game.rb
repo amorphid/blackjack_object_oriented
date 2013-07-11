@@ -4,7 +4,9 @@ class Game
 
   def initialize
     @cards  = ["card"] * 52
-    @dealer = true
-    @hands  = [Hand.new, Hand.new(dealer: @dealer)]
+    @hands  = [
+      Hand.new,
+      Hand.new(dealer: true)
+    ]
   end
 end

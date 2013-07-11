@@ -14,4 +14,14 @@ describe Hand do
       expect(hand.dealer?).to eq(true)
     end
   end
+
+  # REFACTOR ME:  before me, put cards in a deck.
+  # describe "#cards" do
+  #   it "should start with 2 cards" do
+  #     hand  = Hand.new
+  #     cards = hand.cards
+
+  #     expect(cards.count).to eq(2)
+  #   end
+  # end
 end

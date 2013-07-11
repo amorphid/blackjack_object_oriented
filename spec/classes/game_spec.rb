@@ -21,12 +21,6 @@ describe Game do
     end
   end
 
-  it "deals two cards to everyone" do
-    hands = game.hands
-
-    count = hands.select { |i| i.cards.count}
-  end
-
   it "let's player take turn" do
     pending
   end
