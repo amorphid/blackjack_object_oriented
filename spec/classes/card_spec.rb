@@ -1,4 +1,4 @@
-require "spec_helper"
+# require "spec_helper"
 
-describe Card do
-end
+# describe Card do
+# end

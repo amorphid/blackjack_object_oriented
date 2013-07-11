@@ -1,12 +1,4 @@
-require "spec_helper"
+# require "spec_helper"
 
-describe Player do
-  describe "#hand" do
-    it "should be a Hand" do
-      deck   = Deck.new
-      player = Player.new
-
-      expect(player.hand(deck)).to be_a(Hand)
-    end
-  end
-end
+# describe Player do
+# end

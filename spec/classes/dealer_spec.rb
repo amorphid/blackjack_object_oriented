@@ -1,5 +1,5 @@
-require "spec_helper"
+# require "spec_helper"
 
-describe Dealer do
-end
+# describe Dealer do
+# end
 

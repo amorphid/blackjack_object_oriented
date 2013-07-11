@@ -1,12 +1,8 @@
-class Hand
-  attr_accessor :cards
+# class Hand
+#   attr_accessor :cards
 
-  def initialize
-    @cards = []
-  end
-
-  def count
-    @cards.count
-  end
-end
+#   def initialize(deck)
+#     @cards = [deck.cards.pop, deck.cards.pop]
+#   end
+# end
 

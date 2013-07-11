@@ -1,5 +1,11 @@
-require "spec_helper"
+# require "spec_helper"
 
-describe Hand do
+# describe Hand do
+#   it "should have 2 cards" do
+#     deck  = Deck.new
+#     hand  = Hand.new(deck)
+#     cards = hand.cards
 
-end
+#     expect(cards.count).to eq(2)
+#   end
+# end
