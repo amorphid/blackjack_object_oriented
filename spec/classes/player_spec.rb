@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Player do
   describe "#hand" do
-    it "should" do
+    it "should be a Hand" do
       deck   = Deck.new
       player = Player.new
 
