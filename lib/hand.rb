@@ -1,7 +1,9 @@
 class Hand
-  attr_reader :player
+  def initialize(dealer: false)
+    @dealer = dealer
+  end
 
-  def initialize(player)
-    @player = "player"
+  def dealer?
+    @dealer
   end
 end
