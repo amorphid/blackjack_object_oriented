@@ -1,1 +1,2 @@
-require "all"
+require "utilities/load_requirements"
+
