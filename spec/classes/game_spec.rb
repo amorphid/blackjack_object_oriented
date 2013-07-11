@@ -3,14 +3,25 @@ require "spec_helper"
 describe Game do
   let(:game) { Game.new }
 
+  # REFACTOR ME:  I should have 52 cards objects or the current 52 nil objects
   describe "#cards" do
-    it "should have 52 cards" do
+    it "should have 52 cards." do
       cards = game.cards
 
       expect(cards.count).to eq(52)
     end
   end
 
+  describe "#hands" do
+    it "should have 2 hands" do
+      hands = game.hands
+      count = hands.select { |i| i.is_a? Hand }.count
+
+      expect(count).to eq(2)
+    end
+  end
+
+  # REFACTOR ME:  Add me to hand.  For now, hand can just belong to player
   describe "#player" do
     it "should be 'player'" do
       player = game.player
@@ -19,6 +30,7 @@ describe Game do
     end
   end
 
+  # REFACTOR ME:  Add me to hand.  For now, hand can just belong to dealer
   describe "#dealer" do
     it "creates a dealer" do
       dealer = game.dealer

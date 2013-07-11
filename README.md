@@ -16,6 +16,7 @@ v2013-07-11-0949.1
 2.  If a class had more than 6 methods, including the initialize method, try
 breaking it into two methods.
 3.  If a method has more than 5 lines, break it's probably too big.
+4.  If you have arrays within arrays, you're probably missing an array.
 
 ## Philosophy
 1.  The only way to write good code is to have written lots of bad code.
