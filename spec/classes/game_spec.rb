@@ -7,5 +7,11 @@ describe Game do
 
       expect(player).to be_a(Player)
     end
+
+    it "should create a dealer" do
+      dealer = Game.new.dealer
+
+      expect(dealer).to be_a(Dealer)
+    end
   end
 end

@@ -1,2 +1,2 @@
-# class Dealer
-# end
+class Dealer
+end
