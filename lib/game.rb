@@ -1,9 +1,9 @@
 class Game
-  attr_reader :cards,
+  attr_reader :deck,
               :hands
 
   def initialize
-    @cards  = ["card"] * 52
+    @deck   = Deck.new
     @hands  = [
       Hand.new,
       Hand.new(dealer: true)

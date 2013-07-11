@@ -3,13 +3,11 @@ require "spec_helper"
 describe Game do
   let(:game) { Game.new }
 
-  # REFACTOR ME:  Duplicates test in deck_spec
-  describe "#cards" do
-    it "should have 52 cards." do
-      cards = game.cards
-      count = cards.select { |i| i.eql? "card" }.count
+  describe "#deck" do
+    it "should have a deck" do
+      deck = game.deck
 
-      expect(count).to eq(52)
+      expect(deck).to be_a(Deck)
     end
   end
 
