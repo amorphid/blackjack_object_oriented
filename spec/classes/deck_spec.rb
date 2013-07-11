@@ -1,6 +1,6 @@
-# require "spec_helper"
+require "spec_helper"
 
-# describe Deck do
+describe Deck do
 #   let(:deck) { Deck.new }
 #   let(:cards) { deck.cards }
 
@@ -51,4 +51,4 @@
 #       expect(deck.suits).to eq(["C", "D", "H", "S"])
 #     end
 #   end
-# end
+end

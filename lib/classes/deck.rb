@@ -1,4 +1,4 @@
-# class Deck
+class Deck
 #   attr_reader :cards
 
 #   def initialize
@@ -27,4 +27,4 @@
 #   def suits
 #     ["C", "D", "H", "S"]
 #   end
-# end
+end
