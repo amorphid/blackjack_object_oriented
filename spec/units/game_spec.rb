@@ -21,15 +21,6 @@ describe Game do
     end
   end
 
-  # REFACTOR ME:  Add me to hand.  For now, hand can just belong to player
-  describe "#player" do
-    it "should be 'player'" do
-      player = game.player
-
-      expect(player).to eq("player")
-    end
-  end
-
   # REFACTOR ME:  Add me to hand.  For now, hand can just belong to dealer
   describe "#dealer" do
     it "creates a dealer" do
