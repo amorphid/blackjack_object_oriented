@@ -10,7 +10,9 @@ describe Game do
   end
 
   it "creates a player" do
-    pending
+    player = game.player
+
+    expect(player).to eq("player")
   end
 
   it "creates a dealer" do
