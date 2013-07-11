@@ -5,7 +5,7 @@ class Game
               :player
 
   def initialize
-    @cards  = [nil] * 52
+    @cards  = ["card"] * 52
     @player = "player"
     @dealer = "dealer"
     @hands  = [Hand.new, Hand.new]
