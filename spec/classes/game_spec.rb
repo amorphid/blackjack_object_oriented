@@ -3,20 +3,28 @@ require "spec_helper"
 describe Game do
   let(:game) { Game.new }
 
-  it "creates a deck of cards" do
-    cards = game.cards
+  describe "#cards" do
+    it "should have 52 cards" do
+      cards = game.cards
 
-    expect(cards.count).to eq(52)
+      expect(cards.count).to eq(52)
+    end
   end
 
-  it "creates a player" do
-    player = game.player
+  describe "#player" do
+    it "should be 'player'" do
+      player = game.player
 
-    expect(player).to eq("player")
+      expect(player).to eq("player")
+    end
   end
 
-  it "creates a dealer" do
-    pending
+  describe "#dealer" do
+    it "creates a dealer" do
+      dealer = game.dealer
+
+      expect(dealer).to eq("dealer")
+    end
   end
 
   it "deals two cards to everyone" do
