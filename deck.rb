@@ -12,8 +12,6 @@ class Deck
     ranks.product(suits).each do |rank, card|
       @cards << Card.new(rank, card)
     end
-
-    @cards
   end
 
   def ranks
