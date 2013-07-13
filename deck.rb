@@ -1,5 +1,6 @@
 class Deck
   attr_reader :blackjack,
+              :cards,
               :shuffle
 
   def initialize

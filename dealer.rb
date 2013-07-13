@@ -2,11 +2,12 @@ class Dealer < Player
   def initialize
     @deck = Deck.new
     @deck.shuffle!
-    deal(self, 2)
+    hand
+    two_cards = @deck.draw(2)
+    self.hand.add_cards(two_cards)
   end
 
-  def deal(player, n = 1)
-    hand       = player.hand
-    hand.cards = hand.cards + @deck.draw(n)
+  def deal(n = 1)
+    @deck.draw(n)
   end
 end
