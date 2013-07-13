@@ -1,6 +1,4 @@
-require "./deck.rb"
-
-class Dealer
+class Dealer < Player
   def initialize
     @deck = Deck.new
     @deck.shuffle!
@@ -8,6 +6,7 @@ class Dealer
   end
 
   def deal(player, n = 1)
-    # need to implement Player#hand
+    hand       = player.hand
+    hand.cards = hand.cards + @deck.draw(n)
   end
 end

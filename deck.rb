@@ -1,17 +1,22 @@
-require "./card.rb"
-
 class Deck
   attr_reader :blackjack,
               :shuffle
 
   def initialize
     @cards = []
+    blackjack
   end
 
   def blackjack
     ranks.product(suits).each do |rank, card|
       @cards << Card.new(rank, card)
     end
+  end
+
+  def draw(n)
+    n_cards = []
+    n.times { n_cards << @cards.pop }
+    n_cards
   end
 
   def ranks
@@ -23,7 +28,7 @@ class Deck
   end
 
   def shuffle!
-    @cards = shuffle.dup!
+    @cards = shuffle.dup
   end
 
   def suits
