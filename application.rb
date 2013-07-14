@@ -3,7 +3,8 @@ require "./card.rb"
 require "./deck.rb"
 require "./player.rb"
 require "./dealer.rb"
-require "./turn.rb"
+# require "./turn.rb"
+require "./table.rb"
 
 class Application
   def initialize
@@ -13,98 +14,34 @@ class Application
     run
   end
 
-  def cards
-    a = []
-    b = []
-    text = ""
-
-    @dealer.hand.cards.each { |card| a << card.face }
-    @player.hand.cards.each { |card| b << card.face }
-
-    limit = [a.count, b.count].max - 1
-
-    0.upto(limit).each do |i|
-      text << "|  "
-
-      text << case
-              when a[i].nil? then " " * 6
-              else                a[i]
-              end
-
-      text << "  |  "
-
-      text << case
-              when b[i].nil? then " " * 6
-              else                b[i]
-              end
-
-      text << "  |\n"
+  def dealer_turn
+    while @dealer.may_hit? && @dealer.hand.value < 17
+      @dealer.hit(@dealer)
     end
-
-    text
   end
 
-  def hand_values
-    de_val = @dealer.hand.value.to_s
-    pl_val = @player.hand.value.to_s
-
-    text  = "|  "
-
-    text << de_val
-    text << case de_val.length
-            when 1 then " "
-            else        ""
-            end
-
-    text << "      |  "
-
-    text << pl_val
-    text << case pl_val.length
-            when 1 then " "
-            else        ""
-            end
-
-    text << "      |\n"
+  def player_choice(input = gets.chomp)
+    input
   end
 
   def run
-    puts
-    puts header
-    puts
-    puts intro
-
-
-
-    # Turn.new(@dealer, @player)
-    # Turn.new(@dealer, @dealer) unless @player.bust?
-
-    # puts "Player:  #{@player.hand.value}"
-    # puts "Dealer:  #{@dealer.hand.value}"
+    player_turn
+    dealer_turn if @player.hand.value < 22
+    results
   end
 
-  def header
-    text = "-----BLACKJACK-----\n"
-    text << "\u00a92013 Captain Coder\n"
+  def player_turn()
+    choice = "1"
+
+    while @player.may_hit? && choice == "1"
+      Table.new(@dealer, @player).choices
+      choice = player_choice
+      @player.hit(@dealer) if choice == "1"
+    end
   end
 
-  def intro
-    text  = "-----------------------\n"
-    text << "|  DEALER  |  PLAYER  |\n"
-    text << "|          |          |\n"
-    text << "| Cards    | Cards    |\n"
-
-    text << cards
-
-    text << "|          |          |\n"
-    text << "| Points   | Points   |\n"
-
-    text << hand_values
-
-    text << "-----------------------\n"
-    text << "\n"
-    text << "CHOICES\n"
-    text << " 1)  Hit\n"
-    text << " 2)  Stand\n"
+  def results
+    Table.new(@dealer, @player).results
   end
 end
 
