@@ -15,7 +15,7 @@ class Application
 
   def run
     Turn.new(@dealer, @player)
-    Turn.new(@dealer, @dealer)
+    Turn.new(@dealer, @dealer) unless @player.bust?
 
     puts "Player:  #{@player.hand.value}"
     puts "Dealer:  #{@dealer.hand.value}"
@@ -23,4 +23,3 @@ class Application
 end
 
 Application.new
-

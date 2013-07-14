@@ -15,7 +15,7 @@ class Turn
       else
         @player.hand.show
         puts
-        print "Would you like to 1) Hit or 2) Stand?"
+        "Would you like to 1) Hit or 2) Stand?  "
         choice = gets.chomp
 
         if choice == "1"
@@ -27,4 +27,3 @@ class Turn
     end
   end
 end
-

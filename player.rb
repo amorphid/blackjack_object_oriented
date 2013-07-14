@@ -5,6 +5,10 @@ class Player
     @hand = Hand.new
   end
 
+  def bust?
+    @hand.value > 21 ? true : false
+  end
+
   def hit(dealer, n = 1)
     n_cards = dealer.deal(n)
     @hand.add_cards(n_cards)
