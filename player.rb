@@ -1,14 +1,12 @@
 class Player
-  attr_accessor :dealer
-  attr_reader   :hand, :hit
-  attr_writer   :dealer
+  attr_reader :hand
 
-  def hand
-    @hand ||= Hand.new
+  def initialize
+    @hand = Hand.new
   end
 
-  def hit(n = 1)
-    n_cards = @dealer.deal(n)
+  def hit(dealer, n = 1)
+    n_cards = dealer.deal(n)
     @hand.add_cards(n_cards)
   end
 

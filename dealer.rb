@@ -1,10 +1,10 @@
 class Dealer < Player
+
   def initialize
+    super
     @deck = Deck.new
     @deck.shuffle!
-    hand
-    two_cards = @deck.draw(2)
-    self.hand.add_cards(two_cards)
+    hit(self, 2) # why are you hitting yourself?!
   end
 
   def deal(n = 1)
